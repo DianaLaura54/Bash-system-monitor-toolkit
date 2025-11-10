@@ -51,13 +51,13 @@ check_command "df" || MISSING=$((MISSING + 1))
 check_command "free" || MISSING=$((MISSING + 1))
 
 # Optional but recommended
-check_command "bc" || echo "  ⚠ bc is optional but recommended"
-check_command "lsof" || echo "  ⚠ lsof is optional but recommended"
+check_command "bc" || echo "   bc is optional but recommended"
+check_command "lsof" || echo "  lsof is optional but recommended"
 
 echo ""
 
 if [[ $MISSING -gt 0 ]]; then
-    echo "⚠ Warning: $MISSING required commands are missing"
+    echo " Warning: $MISSING required commands are missing"
     echo "The toolkit may not work properly"
     echo ""
 fi
@@ -66,7 +66,7 @@ echo "[4/4] Running quick test..."
 if ./dashboard.sh --help &>/dev/null || true; then
     echo "✓ Dashboard script is functional"
 else
-    echo "⚠ Dashboard script may have issues"
+    echo " Dashboard script may have issues"
 fi
 
 echo ""
@@ -81,4 +81,4 @@ echo "For help, see:"
 echo "  README.md - Full documentation"
 echo "  QUICKSTART.md - Quick start guide"
 echo ""
-echo "Enjoy! 🚀"
+echo "Enjoy! "
